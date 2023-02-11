@@ -1,149 +1,196 @@
-*,*::before,*::after {
-    box-sizing: border-box;
-    user-select:none;
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  user-select: none;
 }
 
 body {
-    margin: 0;
-    padding: 0;
-    background-color: rgb(43, 42, 42);
+  margin: 0;
+  padding: 0;
+  background-color: rgb(43, 42, 42);
 }
 
 .how-btn {
-    position: absolute;
-    top: 15px;
-    left: 15px;
+  position: absolute;
+  top: 15px;
+  left: 15px;
 
-    border: 2px solid aqua;
-    border-radius: 5px;
-    padding: 1em 1.5em;
-    background-color: rgb(43, 42, 42);
-    color: aqua;
-    font-weight: 700;
-    cursor: pointer;
-    transition: .3s ease-in-out;
+  border: 2px solid aqua;
+  border-radius: 5px;
+  padding: 1em 1.5em;
+  background-color: rgb(43, 42, 42);
+  color: aqua;
+  font-weight: 700;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
 }
 
-.how-btn:hover,.how-btn:active {
-    background-color: aqua;
-    color: rgb(43, 42, 42);
-    box-shadow: 3px 3px 10px aqua;
+.how-btn:hover,
+.how-btn:active {
+  background-color: aqua;
+  color: rgb(43, 42, 42);
+  box-shadow: 3px 3px 10px aqua;
 }
 
 .controls-popup {
-    background-color: rgb(43, 42, 42);
-    color: aqua;
-    border: 3px solid aqua;
-    border-radius: 10px;
-    width: fit-content;
-    padding: 1em;
-    text-align: center;
-    box-shadow: 0px 0px 10px aqua;
+  background-color: rgb(43, 42, 42);
+  color: aqua;
+  border: 3px solid aqua;
+  border-radius: 10px;
+  width: fit-content;
+  padding: 1em;
+  text-align: center;
+  box-shadow: 0px 0px 10px aqua;
 
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%) scale(0);
-    z-index: 2;
-    transition: 200ms ease-in-out;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  z-index: 2;
+  transition: 200ms ease-in-out;
 }
 
 .controls-popup.active {
-    transform: translate(-50%, -50%) scale(1);
-}
-
-.controls-overlay.active {
-    pointer-events: all;
-    opacity: 1;
+  transform: translate(-50%, -50%) scale(1);
 }
 
 .controls-overlay {
-    position: fixed;
-    top: 0px;
-    left: 0px;
-    width: 100vw;
-    height: 100vh;
-    background: rgba(0, 0, 0, 0.7);
-    z-index: 1;
-    pointer-events: none;
-    opacity: 0;
-    transition: 200ms ease-in-out;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.7);
+  z-index: 1;
+  pointer-events: none;
+  opacity: 0;
+  transition: 200ms ease-in-out;
+}
+
+.controls-overlay.active {
+  pointer-events: all;
+  opacity: 1;
 }
 
 .close-btn {
-    position: absolute;
-    top: 20px;
-    right: 20px;
-    border: 1px solid aqua;
-    border-radius: 50%;
-    background-color: rgb(43, 42, 42);
-    color: aqua;
-    width: 30px;
-    height: 30px;
-    cursor: pointer;
-    text-align: center;
-    font-weight: 700;
-    font-size: 1.3em;
-    transition: .2s ease-in-out;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  border: 1px solid aqua;
+  border-radius: 50%;
+  background-color: rgb(43, 42, 42);
+  color: aqua;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  text-align: center;
+  font-weight: 700;
+  font-size: 1.3em;
+  transition: 0.2s ease-in-out;
 }
 
 .close-btn:hover {
-    background-color: aqua;
-    color: rgb(43, 42, 42);
+  background-color: aqua;
+  color: rgb(43, 42, 42);
 }
 
 .controls-popup > h2 {
-    text-shadow: 1px 1px 5px aqua;
-    margin: 0px 0 30px 0;
-    font-size: 2em;
+  text-shadow: 1px 1px 5px aqua;
+  margin: 0px 0 30px 0;
+  font-size: 2em;
 }
 
 h1 {
-    font-size: 4em;
-    color: aqua;
-    text-align: center;
-    text-shadow: 1px 1px 10px aqua;
+  font-size: 4em;
+  color: aqua;
+  text-align: center;
+  text-shadow: 1px 1px 10px aqua;
 }
 
 main {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .pl {
-    text-align: center;
-    font-size: 7em;
-    font-weight: 700;
-    color: aqua;
-    flex-grow: 1;
-    text-shadow: 1px 1px 7px aqua;
+  text-align: center;
+  font-size: 7em;
+  font-weight: 700;
+  color: aqua;
+  flex-grow: 1;
+  text-shadow: 1px 1px 7px aqua;
 }
 
 .game-container {
-    width: 500px;
-    height: 500px;
-    background-color: rgb(19, 18, 18);
-    color: aqua;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(3, 1fr);
-    box-shadow: 0 0 10px aqua;
+  width: 500px;
+  height: 500px;
+  background-color: rgb(19, 18, 18);
+  color: aqua;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  box-shadow: 0 0 10px aqua;
 }
 
 .square {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    font-size: 7em;
-    font-weight: 700;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-size: 7em;
+  font-weight: 700;
 
-    transition: .2s ease-in-out;
-    cursor: pointer;
+  transition: 0.2s ease-in-out;
+  cursor: pointer;
 }
 
 .square:hover {
-    background-color: rgb(43, 42, 42);
-    box-shadow: 0 0 10px aqua;
+  background-color: rgb(43, 42, 42);
+  box-shadow: 0 0 10px aqua;
+}
+
+/* ChatGPT STUFF */
+.win-popup {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgb(43, 42, 42);
+  padding: 1em;
+  border-radius: 10px;
+  box-shadow: 0px 0px 6px aqua;
+  border: 3px solid aqua;
+  color: aqua;
+  z-index: 2;
+
+  transition: 200ms ease-in-out;
+}
+
+.win-message {
+  font-size: 20px;
+  margin-bottom: 20px;
+  margin-top: 5px;
+  text-align: center;
+}
+
+.play-again-btn {
+  display: block;
+  margin: 0 auto;
+  padding: 10px 20px;
+  background-color: rgb(43, 42, 42);
+  color: aqua;
+  border: 2px solid aqua;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+}
+
+.play-again-btn:hover,
+.play-again-btn:active {
+  background-color: aqua;
+  color: rgb(43, 42, 42);
+  box-shadow: 0 0 5px aqua;
 }
