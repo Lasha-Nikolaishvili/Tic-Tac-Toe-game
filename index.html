@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tik-tak-toe</title>
+    <link rel="stylesheet" href="app.css">
+</head>
+<body>
+    <h1>TIK-TAK-TOE</h1>
+    <button type="button" class="how-btn">How To Play</button>
+    <div class="popup-container">
+        <div class="controls-popup">
+            <button type="button" class="close-btn">&times;</button>
+            <h2>Controls</h2>
+            <p>Place a symbol by left-clicking on a square.</p>
+            <p>You can delete a square by double-clicking on it.</p>
+            <p>Player One(Circle) always goes first.</p>
+        </div>
+        <div class="controls-overlay"></div>
+    </div>
+    <main>
+        <div class="pl p1">&#9711;</div>
+        <div class="game-container">
+            <div class="square"></div>
+            <div class="square"></div>
+            <div class="square"></div>
+            <div class="square"></div>
+            <div class="square"></div>
+            <div class="square"></div>
+            <div class="square">&#9711;</div>
+            <div class="square"></div>
+            <div class="square"></div>
+        </div>
+        <div class="pl p2">&times;</div>
+    </main>
+
+    <script src="app.js"></script>
+</body>
+</html>
