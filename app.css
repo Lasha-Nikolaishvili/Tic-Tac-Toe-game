@@ -127,6 +127,11 @@ main {
   color: aqua;
   flex-grow: 1;
   text-shadow: 1px 1px 7px aqua;
+  transition: .2s ease-in-out;
+}
+
+.pl:last-of-type {
+  opacity: 0;
 }
 
 .game-container {

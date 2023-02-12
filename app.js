@@ -17,11 +17,9 @@ function togglePopup() {
 
 let gameOver = false;
 let plTurn = "O";
-pls[1].style.visibility = 'hidden';
 
 function displayResult(winner) {
   const winPopup = document.querySelector(".win-popup");
-  const winOverlay = document.querySelector('win-overlay');
   const winMessage = document.querySelector(".win-message");
   const playAgainBtn = document.querySelector(".play-again-btn");
 
@@ -34,8 +32,8 @@ function displayResult(winner) {
       squares[i].innerHTML = "";
     }
     winPopup.style.display = "none";
-    pls[0].style.visibility = 'visible';
-    pls[1].style.visibility = 'hidden';
+    pls[0].style.opacity = '1';
+    pls[1].style.opacity = '0';
     gameOver = false;
     plTurn = "O";
   });
@@ -82,11 +80,11 @@ for (let i = 0; i < squares.length; i++) {
   squares[i].addEventListener("click", () => {
     if (squares[i].innerHTML === "" && !gameOver) {      
       if(plTurn === 'O') {
-        pls[0].style.visibility = 'hidden';
-        pls[1].style.visibility = 'visible';
+        pls[0].style.opacity = '0';
+        pls[1].style.opacity = '1';
       } else {
-        pls[0].style.visibility = 'visible';
-        pls[1].style.visibility = 'hidden';
+        pls[0].style.opacity = '1';
+        pls[1].style.opacity = '0';
       }
       squares[i].innerHTML = plTurn;
       checkForWin();
